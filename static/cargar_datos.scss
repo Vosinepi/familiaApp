@@ -1,0 +1,68 @@
+@import "global";
+@import "colors";
+
+
+
+
+
+html,
+body {
+  background-color: $fondo;
+  font-size: 17;
+  font-family: 'Palette Mosaic', cursive;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  color: $operador-hover;
+  text-align: center;
+  padding: 20px;
+}
+
+.formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+   
+    text-align: center;
+        p {
+          border-radius: 10px;
+          color: white;
+          font-weight: 700;
+          padding: 20px;
+          padding-left: 50px;
+          padding-right: 50px;
+          background: $botonOp;
+        }
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.boton-form {
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.boton-volver {
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}

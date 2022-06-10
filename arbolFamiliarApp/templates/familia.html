@@ -1,0 +1,59 @@
+{% load sass_tags %} {% load edad %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="{% sass_src 'familia.scss' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&family=Roboto:wght@100;300;400;700&display=swap');
+    </style>
+    <title>Familia</title>
+  </head>
+  <body>
+    <h1>Esta es mi familia</h1>
+
+    <div class="familia">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nompre</th>
+            <th scope="col">Appelido</th>
+            <th scope="col">Fecha de nacimiento</th>
+            <th scope="col">Edad</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for pariente in lista_familia %}
+          <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ pariente.nombre }}</td>
+            <td>{{ pariente.apellido }}</td>
+            <td>{{ pariente.fecha_de_nacimiento }}</td>
+
+            {% edad pariente as edad %}
+            <td>{{ edad }}</td>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+    </div>
+    <button
+      class="boton-volver"
+      onclick="location.href='http://127.0.0.1:8000/'"
+      type="button"
+    >
+      Volver
+    </button>
+  </body>
+</html>
