@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="{% sass_src 'index.scss' %}" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&family=Roboto:wght@100;300;400;700&display=swap');
     </style>
@@ -31,6 +35,13 @@
             type="button"
           >
             Cargar Datos
+          </button>
+          <button
+            class="boton-inicio"
+            onclick="location.href='http://127.0.0.1:8000/admin/'"
+            type="button"
+          >
+            Admin
           </button>
         </div>
       </body>
