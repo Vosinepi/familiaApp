@@ -36,7 +36,9 @@ h1 {
     background: #1d2c67; }
 
 .boton-volver {
-  background-color: #04AA6D;
+  height: 50px;
+  width: 100px;
+  background-color: #1d2c67;
   border: none;
   border-radius: 5px;
   color: white;

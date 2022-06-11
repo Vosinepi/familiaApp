@@ -24,18 +24,21 @@ h1 {
  
   text-align: center;
       p {
-        border-radius: 10px;
+        
         color: white;
         font-weight: 700;
         padding: 20px;
         padding-left: 50px;
         padding-right: 50px;
-        background: $botonOp;
+        
       }
 }
 
 .boton-inicio {
-  background-color: #04AA6D;
+  font-size: 15px;
+  height: 50px;
+  width: 200px;
+  background-color:$botonOp;
   border: none;
   border-radius: 5px;
   color: white;

@@ -46,7 +46,7 @@ input[type=text] {
 }
 
 .boton-form {
-    background-color: #04AA6D;
+    background-color:$botonOp;
     border: none;
     border-radius: 5px;
     color: white;
@@ -57,7 +57,9 @@ input[type=text] {
 }
 
 .boton-volver {
-  background-color: #04AA6D;
+  height: 50px;
+  width: 100px;
+  background-color:$botonOp;
   border: none;
   border-radius: 5px;
   color: white;
