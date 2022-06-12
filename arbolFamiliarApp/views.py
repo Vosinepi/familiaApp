@@ -1,8 +1,4 @@
-from re import template
-from django.http import HttpResponse
 from django.shortcuts import render
-from django.template import loader, context
-from django.http import HttpResponse
 from arbolFamiliarApp.models import Familia, Carga_familia_form
 
 
@@ -16,10 +12,10 @@ def index(request):
 
 def cargar_familia(request):
     """
-    If the request is a POST, then validate the form and save it. 
-    If the request is not a POST, then create a new form. 
+    If the request is a POST, then validate the form and save it.
+    If the request is not a POST, then create a new form.
     Then render the template with the form.
-    
+
     :param request: The request object is a Django object that contains metadata about the request sent
     to the server
     :return: The form is being returned.
@@ -27,7 +23,7 @@ def cargar_familia(request):
     if request.method == "POST":
         form = Carga_familia_form(request.POST)
         if form.is_valid():
-            form.save()  
+            form.save()
     else:
         form = Carga_familia_form()
 
