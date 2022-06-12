@@ -15,10 +15,19 @@ def index(request):
 
 
 def cargar_familia(request):
+    """
+    If the request is a POST, then validate the form and save it. 
+    If the request is not a POST, then create a new form. 
+    Then render the template with the form.
+    
+    :param request: The request object is a Django object that contains metadata about the request sent
+    to the server
+    :return: The form is being returned.
+    """
     if request.method == "POST":
         form = Carga_familia_form(request.POST)
         if form.is_valid():
-            form.save()  # does nothing, just trigger the validation
+            form.save()  
     else:
         form = Carga_familia_form()
 
