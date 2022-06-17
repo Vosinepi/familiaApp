@@ -10,6 +10,7 @@ class FamiliaAdmin(admin.ModelAdmin):
         "apellido",
         "fecha_de_nacimiento",
     )
+    search_fields = ("nombre", "apellido")
 
 
 admin.site.register(Familia, FamiliaAdmin)
