@@ -60,7 +60,7 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            r"C:\Users\ismael\Desktop\html\pytho-coder\familiaApp\arbolFamiliarApp\templates"
+            r"C:\Users\ismael\Desktop\html\pytho-coder\familiaApp\arbolFamiliarApp\templates",
         ],
         "APP_DIRS": True,
         "OPTIONS": {
