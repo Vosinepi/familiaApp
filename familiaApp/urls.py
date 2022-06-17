@@ -19,7 +19,7 @@ from arbolFamiliarApp.views import familia, cargar_familia, index
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", index),
-    path("familia/", familia),
-    path("cargar-datos/", cargar_familia),
+    path("", index, name="index"),
+    path("familia/", familia, name="familia"),
+    path("cargar-datos/", cargar_familia, name="cargar_familia"),
 ]
