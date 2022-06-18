@@ -39,3 +39,10 @@ def familia(request):
     documento = {"lista_familia": lista_familia}
 
     return render(request, "familia.html", documento)
+
+
+def grafico(request):
+    lista_familia = Familia.objects.all()
+
+    documento = {"lista_familia": lista_familia}
+    return render(request, "grafico.html", documento)
