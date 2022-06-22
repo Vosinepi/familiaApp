@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from arbolFamiliarApp.models import Familia, Carga_familia_form
-
+from arbolFamiliarApp.models import Familia
+from .forms import Carga_familia_form
 
 # Create your views here.
 

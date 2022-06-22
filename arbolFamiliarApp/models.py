@@ -12,10 +12,3 @@ class Familia(models.Model):
 
     def __str__(self):
         return self.nombre
-
-
-# It creates a form for the Familia model.
-class Carga_familia_form(ModelForm):
-    class Meta:
-        model = Familia
-        fields = ["nombre", "apellido", "fecha_de_nacimiento"]

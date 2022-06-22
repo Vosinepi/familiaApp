@@ -8,6 +8,12 @@ register = template.Library()
 
 @register.simple_tag
 def grafico(familia):
+    """
+    It takes a list of objects, and returns a dictionary with the number of objects per month.
+
+    :param familia: list of Familiar objects
+    :return: A dictionary with the months as keys and the number of family members as values.
+    """
     pariente_x_mes = dict()
 
     for familiar in familia:
@@ -33,13 +39,28 @@ def grafico(familia):
             pariente_x_mes.items(), key=lambda x: datetime.datetime.strptime(x[0], "%b")
         )
     )
+
     print(pariente_x_mes)
     print(ordered_data)
+
+    parientes = []
+    for pariente in ordered_data.values():
+        parientes.append(pariente)
+
+    print(parientes)
     fig = plt.figure(figsize=(10, 5))
 
     # creating the bar plot
     plt.bar(ordered_data.keys(), ordered_data.values(), color="#1d2c67", width=0.5)
 
+    for i in range(len(parientes)):
+        plt.text(
+            i,
+            (parientes[i] - 0.05),
+            round(parientes[i], 1),
+            ha="center",
+            bbox=dict(facecolor="orange", alpha=0.8),
+        )
     plt.xlabel("mes")
     plt.ylabel("familiares")
     plt.title("meses nacimiento")
