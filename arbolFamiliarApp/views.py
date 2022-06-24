@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from arbolFamiliarApp.models import Familia
 from .forms import Carga_familia_form
 
@@ -46,3 +46,10 @@ def grafico(request):
 
     documento = {"lista_familia": lista_familia}
     return render(request, "grafico.html", documento)
+
+
+def eliminar_familiar(request, id):
+    familiar = Familia.objects.get(id=id)
+    familiar.delete()
+
+    return redirect("familia")

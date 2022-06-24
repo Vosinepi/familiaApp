@@ -32,11 +32,12 @@
       <table class="table">
         <thead class="thead-dark">
           <tr>
-            <th scope="col">#</th>
+            <th scope="col">Id</th>
             <th scope="col">Nombre</th>
             <th scope="col">Appelido</th>
             <th scope="col">Fecha de nacimiento</th>
             <th scope="col">Edad</th>
+            <th scope="col">Modificar</th>
           </tr>
         </thead>
         <tbody>
@@ -49,6 +50,14 @@
 
             {% edad pariente as edad %}
             <td>{{ edad }}</td>
+            <td>
+              <a href="">
+                <button class="btn btn-primary">Editar</button>
+              </a>
+              <a href="{% url 'eliminar_familiar' pariente.id %}">
+                <button class="btn btn-danger">Eliminar</button>
+              </a>
+            </td>
           </tr>
           {%endfor%}
         </tbody>
